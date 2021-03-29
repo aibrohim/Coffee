@@ -1,0 +1,49 @@
+.benefits__container {
+  @include reset-list;
+  margin: 0 auto;
+  background-color: #2C343E;
+  border-radius: $chetgi;
+  color: #fff;
+}
+
+.benefits__list {
+  @include reset-list;
+  display: flex;
+}
+
+.benefits__list-item {
+  background-color: $light-green;
+  width: 350px;
+  margin-right: 30px;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    background: no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.benefits__list-item--quality::before {
+  background-image: url("./../coffee-bean.png");
+  width: 72px;
+  height: 72px;
+}
+
+.benefits__list-item--prize::before {
+  background-image: url("./../prize.png");
+  width: 72px;
+  height: 72px;
+}
+
+.benefits__list-item--shipping::before {
+  background-image: url("./../delivery.png");
+  width: 72px;
+  height: 50px;
+}
